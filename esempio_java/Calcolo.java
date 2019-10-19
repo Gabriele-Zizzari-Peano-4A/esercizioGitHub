@@ -10,8 +10,8 @@ public class Calcolo {
         b = Integer.parseInt(JOptionPane.showInputDialog("Inserisci la base"));
         h = Integer.parseInt(JOptionPane.showInoutDialog("Inserisci l'altezza"));
 
-        System.out.print("Area: " + calcolo(b, h, 'a'));
-        System.out.print("Perimetro: " + calcolo(b, h, 'p'));
+        System.out.print("Area: " + calcolo(b, h, 'a') + "  ");
+        System.out.print("Perimetro: " + calcolo(b, h, 'p') + "\n");
     }
 
     private static int calcolo(int b, int h, char c) {
