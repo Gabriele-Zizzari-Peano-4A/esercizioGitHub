@@ -1,22 +1,17 @@
 package calcolo;
 
-import java.util.Scanner;
+import javax.swing.JOptionpane;
 
 public class Calcolo {
 
     public static void main(String[] args) {
-        int b, h, area, perimetro;
-        Scanner tastiera = new Scanner(System.in);
+        int b, h;
 
-        System.out.print("Inserisci la base: ");
-        b = tastiera.nextInt();
+        b = Integer.parseInt(JOptionPane.showInputDialog("Inserisci la base"));
+        h = Integer.parseInt(JOptionPane.showInoutDialog("Inserisci l'altezza"));
 
-        System.out.print("Inserisci l'altezza: ");
-        h = tastiera.nextInt();
-
-        System.out.print("Area: " + calcolo(b, h, 'a'));
-        System.out.print("Perimetro: " + calcolo(b, h, 'p'));
-
+        System.out.print("Area: " + calcolo(b, h, 'a') + "  ");
+        System.out.print("Perimetro: " + calcolo(b, h, 'p') + "\n");
     }
 
     private static int calcolo(int b, int h, char c) {
@@ -27,6 +22,7 @@ public class Calcolo {
                 return b * h;
             default:
                 return 0;
+                
         }
     }
 
